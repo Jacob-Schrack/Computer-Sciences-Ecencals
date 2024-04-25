@@ -1,0 +1,146 @@
+#BROWNTOWN BURGER JOINT POINT OF SALE SOFTWARE
+#VERSION 1.21 LAST REVISION DATE 3/11/2024
+
+
+#VARIABLES
+orderComplete = False
+totalCost = 0
+tax = 0.06
+
+#WELCOME THE USER TO THE POINT OF SALE(POS)
+print("Starting Up")
+print("Warming Up Burners")
+print("Welcome to the Browntown Burger Joint, voted best Burger in Browntown")
+print()
+
+#ASK THEM FOR THEIR NAME AND STORE IT IN name
+name = input("Can I have your name please?  ")
+print("Putting Ice In The Deep Fryers")
+print("Thanks " + name)
+print("Don't Put Ice In The Deep Fryers")
+print("Ignore Last Message")
+
+
+#POINT OF SALE LOOP
+while orderComplete == False:
+    #STAY IN THIS LOOP UNTIL THEY SELECT "COMPLETE ORDER"
+    print("Welcome")
+    print ("What would you like to order: Burgers, Sides, Drinks, Complete Order.")
+    menu = input("-> ")
+    
+    
+    if menu == "Burgers":
+        #IF THEY WANT TO ADD A BURGER:
+        print("We offer the following burgers:")
+        print("1: Hamburger $5.50")
+        print("2: Cheesebuger $6.00")
+        print("3: Western burger (Cheese, onion, western sauce) $6.75")
+        print("4: Borger (It is Borger(If not know what borger is learn)) $20.00")
+        burgerChoice = input("What would you like (input a number 1-4): ")
+        #BURGER 1: HAMBURGER
+        if burgerChoice == "1":
+            totalCost = totalCost + 5.50
+            print("You added Hamburger to your order")
+            print("Your total cost so far: $", totalCost)
+
+        #BURGER 2: CHEESEBURGER
+        elif burgerChoice == "2":
+            totalCost = totalCost + 6.00
+            print("You added Cheeseburger to your order")
+            print("Your total cost so far: $", totalCost)
+
+        #BURGER 3: WESTERN BURGER
+        elif burgerChoice == "3":
+            totalCost = totalCost+ 6.75
+            print("You added Western Burger to your order")
+            print("Your total cost so far: $", totalCost)
+        
+        #BURGER 4: ADD ONE HERE
+            #ADD A NEW BURGER OPTION AND UPDATE ALL CODE ABOVE TO MAKE IT WORK
+        elif burgerChoice == "4":
+            totalCost = totalCost+ 20.00
+            print("You added Borger")
+            print("your toal cost so far: $", totalCost)
+
+            
+        #IF THEY GET HERE, THEY DID NOT MAKE A VALID SELECTION
+        else:
+            print("please make a valid choice")
+        
+    elif menu == "Sides":
+        print("sides")
+        print("We have the following sides")
+        print("1: Fries $1.00")
+        print("2: Better Fries $1.50")
+        print("3: Deepfried Butter $5.00")
+        #Add your Code/Comments Here for sides
+        #Add at least three sides
+        sidechoice = input("input side number(1-3)")
+
+        if sidechoice == "1":
+            totalCost = totalCost+ 1.00
+            print("Fries added")
+            print("Your total cost so far: $", totalCost)
+        
+        elif sidechoice == "2":
+            totalCost = totalCost+ 1.50
+            print("Better Fries added")
+            print("Your total cost so far: $", totalCost)
+
+        elif sidechoice == "3":
+            totalCost = totalCost+ 5.00
+            print("Deepfried Butter added")
+            print("Your total cost so far: $", totalCost)
+
+
+    elif menu == "Drinks":
+        print("drinks")
+        #Add Your code/Comments here for Drinks
+        #Add at least three drinks
+        print("We have the following drinks")
+        print("1: Cream Soda $1.00")
+        print("2: Bubby Brisk $1.50")
+        print("3: Baja Blast $1.00")
+        drinkChoice = input("Enter Drink Number(1-3)")
+
+        if drinkChoice == "1":
+            totalCost = totalCost+ 1.00
+            print("Cream Soda Added")
+            print("Your total cost so far: $", totalCost)
+        
+        elif drinkChoice == "2":
+            totalCost = totalCost+ 1.50
+            print("Bubby Brisk Added")
+            print("Your total cost so far: $", totalCost)
+
+        elif drinkChoice == "3":
+            totalCost = totalCost+ 1.00
+            print("Baja Blast Added")
+            print("Your total cost so far: $", totalCost)
+    
+    elif menu == "Complete Order":
+        #IF THEY SELECT COMPLETE ORDER, SET THE ORDERCOMPLETE TO TRUE
+        orderComplete = True
+        print()
+
+        #GIVE THEM THEIR TOTALS
+        print("order finished")
+        print("You have ordered")
+        print("Subtotal: $", totalCost)
+        totalTax = round(float(totalCost) * tax,2)
+        print("Total Tax: $", totalTax)
+        EndCost = totalTax + totalCost
+        print("Grand Total: $", EndCost)
+        print("Ordered")
+        print("Burger", burgerChoice)
+        print("Drink", drinkChoice)
+        print("Side", sidechoice)
+        print("Thanks For Ordering", name)
+        #Finish this section to give you a grand total as well as print your complete order
+ 
+        
+    else:
+        print("Sorry, not a valid choice, please start over...")
+
+#THE USER ONLY GETS HERE IF THEY FINISH THEIR ORDER
+print("Thank you for eating with us!")
