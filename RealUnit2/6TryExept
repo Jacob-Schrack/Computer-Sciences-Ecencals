@@ -1,0 +1,13 @@
+while True:
+
+    try:
+        Num1 = float(input("Give Num"))
+        Num2 = float(input("Give Num"))
+        EndNum = Num1/Num2
+        print(EndNum," is your end number")
+        break
+
+    except:
+        print("Give Number")
+
+print("end")
