@@ -1,0 +1,6 @@
+print("Calculator Letter Grade")
+print("Put in the grade you got, if it is a desimal round up or down")
+X3=input("->")
+print("put in total number of points")
+B3=input("->")
+x3=(float(X3)/float(B3))
