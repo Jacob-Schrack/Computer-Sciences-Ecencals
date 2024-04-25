@@ -1,0 +1,22 @@
+print("Calculator Letter Grade")
+print("Put in the grade you got, if it is a desimal round up or down")
+X3=input("->")
+print("put in total number of points")
+B3=input("->")
+x3=(float(X3)/float(B3))
+if X3 > "60":
+    print("You Pass")
+elif X3 <= "70":
+    print("You Fail")
+XP=float(x3)*100
+print(XP,"%")
+if XP >= 90:
+    print("A")
+elif XP >= 80:
+    print("B")
+elif XP >= 70:
+    print("C")
+elif XP >= 60:
+    print("D")
+elif XP < 60:
+    print("F")
