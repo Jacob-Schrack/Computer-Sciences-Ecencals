@@ -1,0 +1,20 @@
+print("Welcome To Distance Calulator")
+print("type 1 for in-ft, 2 for ft-mi, and 3 for mi-in")
+X = input("->")
+if X == "1":
+    print("Enter in")
+    UNum = int(input("->"))
+    FNum = UNum/12
+    print(FNum,"ft")
+elif X == "2":
+    print("Enter ft")
+    UNum = int(input("->"))
+    FNum = UNum/5280
+    print(FNum,"Mi")
+elif X == "3":
+    print("Enter Mi")
+    UNum = int(input("->"))
+    FNum = UNum*63360
+    print(FNum,"in")
+else:
+    print("Entered Wrong Try Again")
