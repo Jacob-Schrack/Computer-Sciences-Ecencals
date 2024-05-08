@@ -1,0 +1,63 @@
+#Start up
+print("Welcome to game")
+
+#SetUp
+
+
+location_X = 0
+location_Y = 0
+
+
+#Game With Player Inputs
+GameRun = True
+while GameRun == True:
+
+    #This will determan if they are staying to do an action or moving derection
+    print("Action=1 Move=2")
+    What_Do = input("->")
+
+    if What_Do == "2":
+
+        #this will determan where they move
+        print("What derection do you want to move")
+        print("North=1 East=2 South=3 West=4")
+        Derection = input("->")
+
+        #moveing Up/North
+        if Derection == 1:
+
+            if location_X == 4:
+                print("Hit wall")
+            
+            else:
+                location_Y = location_Y+1
+        
+        #Moveing Right/East
+        elif Derection == 2:
+
+            if location_X == 4:
+                print("Hit wall")
+
+            else:
+                location_X = location_X+1
+
+        #Moving Down/South
+        elif Derection == 3:
+
+            if location_Y == 0:
+                print("Hit wall")
+
+            else:
+                location_Y = location_Y-1
+
+        #Moving Left/West
+        elif Derection == 4:
+
+            if location_X == 0:
+                print("Hit wall")
+            
+            else:
+                location_X = location_X-1
+
+        else:
+            print("Inputed in wrong format try again")
