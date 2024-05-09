@@ -6,7 +6,12 @@ print("Welcome to game")
 
 location_X = 0
 location_Y = 0
+open = "False"
+Key = 0
 
+def Empty_Code():
+    print("Nothing is in this space")
+    print("Look in a diffrent space")
 
 #Game With Player Inputs
 GameRun = True
@@ -61,3 +66,134 @@ while GameRun == True:
 
         else:
             print("Inputed in wrong format try again")
+
+    #Action or what you do, and where
+    elif What_Do == 1:
+
+        #This is the X axis, under every X there is a list of Y
+        #X=0 list
+        if location_X == 0:
+            
+            if location_Y == 0:
+                print("You found a paper")
+                print("The paper says 3=B")
+
+            elif location_Y == 1:
+                Empty_Code()
+            
+            elif location_Y == 2:
+                Empty_Code()
+
+            elif location_Y == 3:
+                Empty_Code()
+            
+            elif location_Y == 4:
+                print("3=B")
+
+            else:
+                print("Error X-0 list")
+
+        #x=1 list
+        elif location_X == 1:
+            if location_Y == 0:
+                Empty_Code()
+
+            elif location_Y == 1:
+                Empty_Code()
+            
+            elif location_Y == 2:
+                Empty_Code()
+
+            elif location_Y == 3:
+
+                #Code for the Chest
+                if open == "False":
+
+                    #Code for trying to open it
+                    print("insert code as(1-2-3-4-5) in ALL CAPS")
+                    Atempt = input("->")
+
+                    #code if corect
+                    if Atempt == "B-U-B-B-Y":
+                        open = "True"
+                        print("Lock opens")
+                    
+                    #code if wrong
+                    else:
+                        print("Wrong code")
+                
+                elif open == "True":
+                    Key = 1
+
+
+            elif location_Y == 4:
+                Empty_Code
+
+            else:
+                print("Error X-1 list")
+            
+        # the x=2
+        elif location_X == 2:
+
+            if location_Y == 0:
+                Empty_Code()
+
+            elif location_Y == 1:
+                print("You found a paper")
+                print("It says 1=B")
+            
+            elif location_Y == 2:
+                Empty_Code()
+
+            elif location_Y == 3:
+                Empty_Code()
+            
+            elif location_Y == 4:
+                Empty_Code()
+
+            else:
+                print("Error X-2 list")
+
+        #the x=3 
+        elif location_X == 3:
+
+            if location_Y == 0:
+                Empty_Code()
+
+            elif location_Y == 1:
+                Empty_Code()
+            
+            elif location_Y == 2:
+                Empty_Code()
+
+            elif location_Y == 3:
+                Empty_Code()
+            
+            elif location_Y == 4:
+                print("You found a paper")
+                print("It says 2=U")
+
+            else:
+                print("Error X-3 list")
+        
+        elif location_X == 4:
+
+            if location_Y == 0:
+                print("You found a paper")
+                print("The paper says 4=B")
+
+            elif location_Y == 1:
+                Empty_Code()
+            
+            #DoorCode
+            elif location_Y == 2:
+                pass
+
+            elif location_Y == 3:
+                Empty_Code()
+            
+            elif location_Y == 4:
+                Empty_Code()
+
+            else:
+                print("Error X-4 list")
