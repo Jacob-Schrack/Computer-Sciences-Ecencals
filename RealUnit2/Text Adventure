@@ -17,6 +17,8 @@ def Empty_Code():
 GameRun = True
 while GameRun == True:
 
+    print(location_X)
+    print(location_Y)
     #This will determan if they are staying to do an action or moving derection
     print("Action=1 Move=2")
     What_Do = input("->")
@@ -26,12 +28,12 @@ while GameRun == True:
         #this will determan where they move
         print("What derection do you want to move")
         print("North=1 East=2 South=3 West=4")
-        Derection = input("->")
+        Derection = int(input("->"))
 
         #moveing Up/North
         if Derection == 1:
 
-            if location_X == 4:
+            if location_Y == 4:
                 print("Hit wall")
             
             else:
@@ -68,15 +70,14 @@ while GameRun == True:
             print("Inputed in wrong format try again")
 
     #Action or what you do, and where
-    elif What_Do == 1:
+    elif What_Do == "1":
 
         #This is the X axis, under every X there is a list of Y
         #X=0 list
         if location_X == 0:
             
             if location_Y == 0:
-                print("You found a paper")
-                print("The paper says 3=B")
+                print("Starting spot")
 
             elif location_Y == 1:
                 Empty_Code()
@@ -88,7 +89,8 @@ while GameRun == True:
                 Empty_Code()
             
             elif location_Y == 4:
-                print("3=B")
+                print("You found a paper")
+                print("The paper says 3=B")
 
             else:
                 print("Error X-0 list")
