@@ -187,13 +187,29 @@ while GameRun == True:
             
             #DoorCode
             elif location_Y == 2:
-                pass
+                
+                #if you have key (Win)
+                if Key == 1:
+                    print("Openning door")
+                    break
+
+                #if you don't have a key
+                elif Key == 0:
+                    print("Find the key")
+
+                else:
+                    print("error Door")
 
             elif location_Y == 3:
-                Empty_Code()
+                print("You found a paper")
+                print("The paper says 5=Y")
             
             elif location_Y == 4:
                 Empty_Code()
 
             else:
                 print("Error X-4 list")
+        
+        #Error for the X axis
+        else:
+            print("Error on X")
