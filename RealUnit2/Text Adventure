@@ -125,6 +125,7 @@ while GameRun == True:
                         print("Wrong code")
                 
                 elif open == "True":
+                    print("Found Key")
                     Key = 1
 
 
@@ -215,3 +216,6 @@ while GameRun == True:
         #Error for the X axis
         else:
             print("Error on X")
+
+print("YOU WIN!!!")
+print("END OF GAME")
