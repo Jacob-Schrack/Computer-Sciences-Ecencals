@@ -1,8 +1,40 @@
+#Code for the End of the Game
+fileName = "File.txt"
+
+def writeToFile(content):
+    try:
+        with open(fileName, 'a') as file:
+            #add a '\n' to the content so it prints on a new line each time
+            content = content +"\n"
+            #write the content to the file
+            file.write(content)
+            #tell the user it was sent
+            print("content added!")
+            #close the file
+            file.close()
+    #in the event the file is unreachable, go here
+    except:
+        print("An error has occured!")
+
+#Rounding a float
+number = round(float(2.222222222222))
+print(number)
+
+
+#Randome Num Inport
+import random
+
+RN = random.randint(1,2)
+
 #Start up
-print("Welcome to game")
+if RN == 1:
+    print("Welcome to Game")
+
+if RN == 2:
+    print("Not Welcome to Game")
+
 
 #SetUp
-
 
 location_X = 0
 location_Y = 0
@@ -219,3 +251,8 @@ while GameRun == True:
 
 print("YOU WIN!!!")
 print("END OF GAME")
+
+#Adds Name to a text doc.
+print("Add Name")
+name = input("->")
+writeToFile(name)
